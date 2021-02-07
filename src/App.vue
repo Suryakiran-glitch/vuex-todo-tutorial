@@ -1,26 +1,40 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+  <div class="container">
+    <AddTodoVue />
+    <FilterrTodoVue />
+    <TodoVue />
+    
+  </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AddTodoVue from './components/AddTodo.vue'
+import FilterrTodoVue from './components/FilterrTodo.vue'
+import TodoVue from './components/Todo.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TodoVue,
+    AddTodoVue,
+    FilterrTodoVue
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-color: #d3d3d3;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6px;
+}
+.container {
+  width: 1100px;
+  margin: 25px auto;
+  font-weight: normal;
+  overflow: auto;
+  padding: 0.2rem;
 }
 </style>
